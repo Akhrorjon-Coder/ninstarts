@@ -68,7 +68,7 @@ section {
     color: #fff !important;
     width: 45px;
     height: 45px;
-    right: 0;
+    right: 1.5rem;
     bottom: 10px;
     font-size: 22px;
     text-align: center;
@@ -76,10 +76,10 @@ section {
     border-radius: 3px;
     cursor: pointer;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
   }
   .scrollToTop-btn.active {
-    right: 20px;
+    right: 1.5rem;
     opacity: 1;
   }
 
@@ -118,7 +118,6 @@ section {
 .header .navbar a.active{
     color: var(--orange);
 }
-
 .header .navbar a:hover{
     color: var(--orange);
 }
@@ -143,7 +142,7 @@ section {
 .home{
     width: 100%;
     background: #FEF8F5;
-    padding: 5rem 0rem;
+    padding: 6rem 0rem;
     position: relative;
     border-bottom: .2rem solid #FCEBE3;
 }
@@ -272,9 +271,6 @@ section {
 
 /* about style section end  */
 
-body{
-    height: 200rem;
-}
 
 /* services section start  */
 
@@ -283,7 +279,7 @@ body{
 }
 
 .services .servicesCards{
-    padding: 3rem 2rem;
+    padding: 3rem 7rem;
     justify-content: center;
     align-items: center;
     display: grid;
@@ -296,10 +292,13 @@ body{
     background: #fff;
     border-radius: .5rem;
     box-shadow: 0 10px 29px 0 rgb(68 88 144 / 10%);
-    padding: 2rem;
     text-align: center;
     border-bottom: 3px solid #fff;
     transition: .5s linear;
+}
+
+.services .servicesCards .card .cardContent{
+    padding: 2rem;
 }
 
 .services .servicesCards .card:hover{
@@ -365,7 +364,7 @@ body{
     gap: 1rem;
 }
 
-.portfolio .portfolioCards .card{
+.portfolio .portfolioCards .portcard{
     border-radius: .5rem;
     cursor: pointer;
     position: relative;
@@ -374,14 +373,14 @@ body{
     transition: all ease-in-out 0.3s;
 }
 
-.portfolio .portfolioCards .card img{
+.portfolio .portfolioCards .portcard img{
     border-radius: .5rem;
     width: 100%;
     z-index: 2;
     min-height: 100%;
 }
 
-.portfolio .portfolioCards .card img:hover{
+.portfolio .portfolioCards .portcard img:hover{
     transform: scale(1.1);
 }
 
@@ -389,18 +388,436 @@ body{
 /* portfolio style section end  */
 
 
+/* faq style section start */
+
+.faq{
+    background: #fef8f5;
+}
+
+.accordionContainer{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 3rem 1rem 7rem;
+}
+
+.accordionContainer .accordion{
+    padding: .7rem 0;
+}
+
+.accordionContainer .accordion button{
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    font-size: 1.1rem;
+    color: #817f7dfb;
+    text-transform: initial;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accordionContainer button:hover{
+    color: var(--orange);
+}
+
+.accordionContainer .accordion .fa-chevron-down{
+    font-size: .8rem;
+    padding-right: .3rem;
+    color: #343A40; 
+}
+
+.accordionContainer .accordionText{
+    padding: 0rem .5rem 0rem .8rem;
+    width: 90%;
+    color: #9b9592;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordionContainer .accordionText p{
+    font-size: .9rem;
+    margin-bottom: .5rem !important;
+}
 
 
+/* faq style section end */
 
 
+/* team style section start  */
+.team{
+    background: #fff;
+}
+.team .teamCard{
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 7rem 3rem 7rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+}
+
+.team .teamCard .card{
+    position: relative;
+}
+
+.team .teamCard .card img{
+    padding: 1rem;
+    width: 100%;
+}
+
+.team .teamCard .card .teamInfo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1.3rem;
+    padding: 1rem;
+    opacity: 0;
+    background: linear-gradient(0deg, rgba(78, 64, 57, 0.95) 0%, rgba(78, 64, 57, 0.95) 15%, rgba(255, 255, 255, 0) 100%);
+}
+
+.team .teamCard .card .teamInfo .teamName{
+    position: absolute;
+    left: 0rem;
+    right: 0;
+    bottom: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.team .teamCard .card .teamInfo .teamName h3{
+    font-size: 1rem;
+}
 
 
+.team .teamCard .card .teamInfo .teamName p{
+    font-style: italic;
+    font-size: .8rem;
+}
 
 
+.team .teamCard .card .teamInfo .teamSocial{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    transition: left ease-in-out 0.3s;
+    background: rgba(78, 64, 57, 0.6);
+    text-align: center;
+}
+
+.team .teamCard .card:hover .teamInfo{
+    background: linear-gradient(0deg, rgba(78, 64, 57, 0.95) 0%, rgba(78, 64, 57, 0.95) 15%, rgba(255, 255, 255, 0) 100%);
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.team .teamCard .card .teamInfo a{
+    display: block;
+    padding: .5rem 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.team .teamCard .card .teamInfo a:hover{
+    color: var(--orange);
+}
 
 
+/* team style section end  */
 
 
+/* clients style section start  */
+
+.clients{
+    background: #fef8f5;
+}
+
+.clients .container{
+    padding: 4rem 7rem 4rem 7rem;
+}
+
+.clients .container .wrapper{
+    display: flex;
+}
+
+.clients .container .wrapper .slide{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.clients .container .wrapper .slide img{
+    width: 100%;
+}
+/* clients style section end  */
+
+
+/* contact style section start  */
+
+.contact .container{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 7rem 3rem 7rem;
+}
+
+.contact .container .address{
+    width: 40%;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    border-top: .2rem solid var(--orange);
+    border-bottom: .2rem solid var(--orange);
+    border-radius: .2rem;
+}
+
+.contact .container .address .addressContent{
+    padding: 2rem 2rem 2rem 2rem;
+
+}
+
+.contact .container .address .addressContent h3{
+    padding-left: 1rem;
+    color: #7a6960;
+    font-size: 1.5rem;
+}
+
+.contact .container .address .location, .email, .phone{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2rem;
+
+}
+
+.contact .container .address .addressContent p{
+    padding: 0rem 6rem;
+    font-size: .9rem;
+    color: #ab9d95;
+}
+
+.contact .container .address i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--orange);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fdf1ec;
+    margin-top: 1rem;
+}
+
+.contact .container .address i:hover{
+    color: #fff;
+    background: var(--orange);
+}
+.contact .message{
+    width: 50%;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    border-top: .2rem solid var(--orange);
+    border-bottom: .2rem solid var(--orange);
+    border-radius: .2rem;
+}
+
+.contact .container .address .addressContent .map{
+   margin-top: 2rem;
+   height: 100%;
+}
+.contact .message form{
+    padding: 2rem;
+}
+
+.contact .message form label{
+    display: block;
+    padding: .5rem 0;
+}
+
+.contact .message form input{
+    padding: .5rem;
+    width: 100%;
+    border: .1rem solid #9b9592;
+    outline: none;
+    border-radius: .3rem;
+}
+
+.contact .message form input:focus{
+    border: .1rem solid var(--orange);
+}
+
+.contact .message form textarea{
+    width: 100%;
+    border: .1rem solid #9b9592;
+    outline: none;
+    border-radius: .3rem;
+    padding: 1rem 1rem;
+}
+
+.contact .message form textarea:focus{
+    border: .1rem solid var(--orange);
+}
+
+.contact .message form a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+/* contact style section end */
+
+/* join style section start  */
+.join{
+    background: #FEF8F5;
+}
+.join p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: initial;
+}
+
+.join #joinSend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.join #joinSend input{
+    padding: .6rem 1rem;
+    width: 31%;
+    border: none;
+    outline: none;
+    margin-right: 0.5rem;
+    border-radius: .2rem;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+}
+
+.join #joinSend input:focus{
+    border: .1rem solid var(--orange);
+    outline: none;
+}
+
+.join #joinSend button{
+    font-size: 1rem;
+}
+.join #joinSend button:hover{
+    cursor: pointer;
+}
+/* join style section end  */
+
+/* footer style section start  */
+
+.contents{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: baseline;
+    padding: 0 7rem;
+    width: 100%;
+}
+
+.contents .content{
+    padding: 0 3rem;
+}
+
+.contents .content h2{
+    font-weight: 500;
+    color: #7A6960;
+}
+
+.contents .content p{
+    width: 100%;
+    color: #9b9592;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.contents .content a span{
+    color: #7A6960;
+    font-size: 1.1rem;
+    padding: 1rem .5rem 1rem 0;
+}
+
+.contents .content a{
+    color: #9b9592;
+    font-size: 1rem;
+    display: block;
+    padding: .4rem 0;
+    text-transform: initial;
+}
+
+.contents .content a:hover{
+    color: var(--orange);
+}
+
+.contents .content a i{
+    color: var(--orange);
+    font-size: .7rem;
+    font-weight: bold;
+    padding-right: 0.3rem;
+}
+
+.contents .content h4{
+    color: #7A6960;
+}
+
+.contents .content .social{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contents .content .social a{
+    margin-right: 0.5rem;
+}
+
+.contents .content .social a i{
+    font-size: 1.2rem;
+    color: var(--orange);
+    padding-left: 0.2rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fdf1ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents .content .social a i:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FEF8F5;
+    padding: 2rem 7rem;
+
+}
+
+.footer p{
+    color: #9b9592;
+}
+
+.footer p span{
+    color: #000;
+}
+
+.footer p a{
+    color: var(--orange);
+}
+
+/* footer style section end  */
 
 
 
@@ -414,6 +831,11 @@ body{
     .header .navbar a{
         margin-right: 1.3rem;
     }
+    .contact .container .address .addressContent{
+        padding: .8rem;
+    
+    }
+
 }
 
 
@@ -459,7 +881,6 @@ body{
 
     .home .home_container{
         flex-direction: column;
-        /* order: 1; */
     }
     
     .home .home_container .homeText{
@@ -474,13 +895,13 @@ body{
 
     .home .home_container .homeImg{
         width: 100%;
+        display: flex;
         justify-content: center !important;
         align-items: center !important;
         order: -1;
     }
     .home .home_container .homeImg img{
-        width: 60% !important;
-
+        width: 50% !important;
     }
 
     .about{
@@ -501,18 +922,70 @@ body{
 
     .about .aboutText{
         width: 100%;
-        display: block;
-        padding: 0;
     }
     
     .about .aboutText .aboutTitle{
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        padding: 0;
+      flex-direction: column;
+      text-align: center;
     }
 
+    .about .aboutText .aboutTitle h2{
+        width: 100%;
+    }
+
+    .about .aboutText .aboutTitle .aboutInfo{
+        padding: 0 2rem;
+    }
+
+    .about .aboutText .cards{
+        display: flex;
+        justify-content: center;
+        padding: 0 5rem;
+    }
+    .about .cards .aboutCard{
+        padding: 0 2rem;
+    }
+    .accordionContainer .accordion button{
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .clients .container{
+        padding: 4rem 5rem;
+    }
+    .contact .container .address .addressContent{
+        padding: 0;
+    }
+    .contact .message form{
+        padding: 1rem;
+    }
+    .contact .container{
+        display: block;
+    }
+    .contact .container .address{
+        width: 100%;
+        padding: 2rem;
+    }
+    .contact .message{
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .contents{
+        padding: 0 4rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(15rem,2fr));
+    }
+    
+    .contents .content p{
+        font-size: .9rem;
+    }
+    .contents .content a span{
+        font-size: 1rem;
+        padding: .6rem .5rem .6rem 0;
+    }
 }
+
+
 
 
 @media (max-width: 768px) {
@@ -521,30 +994,58 @@ body{
     }
     .home .home_container .homeText h1{
         width: 100%;
-        font-size: 2rem;
+        padding-top: 1rem;
+        font-size: 1.5rem;
     }
 
     .home .home_container .homeText h2{
         width: 100%;
         font-size: 1rem;
+        padding-bottom: 1.5rem;
     }
+
+    .about .cards .aboutCard h3{
+        font-size: 1rem;
+    }
+    .about .cards .aboutCard p{
+        width: 100%;
+    }
+
+    .team .teamCard{
+        padding: 4rem 5rem 3rem 5rem;
+    }
+    .clients .container{
+        padding: 4rem 3rem;
+    }
+    .join #joinSend input{
+        padding: .6rem 1rem;
+        width: 50%;
+    }
+    
+
 }
 
+
+
 @media (max-width: 576px) {
+   
     .header .navbar{
         top: 100% !important;
+        width: 100%;
     }
     .home .home_container{
-       padding: 1rem 0;
+       padding: 0;
     }
 
     .home .home_container .homeText h2{
-        padding: 0 0 2rem 2rem;
+        padding: 1.5rem 2rem;
+        font-size: .9rem;
+        width: 80%;
     }
     
     .home .home_container .homeText h1{
-        padding: 0 0 2rem 2rem;
-        font-size: 1.5rem;
+        padding: 1rem 0 0rem 2rem;
+        font-size: 1.2rem;
     }
     .home .home_container .homeText .btn{
         margin: 0 0 0 2rem;
@@ -563,5 +1064,82 @@ body{
     .sectionTitle::before {
         width: 4rem;
         height: .2rem;
+    }
+    
+    .about .cards .aboutCard{
+        padding: 0 2rem;
+    }
+    .about .aboutImg img{
+        width: 80%;
+        padding: 0;
+    }
+
+    .about .aboutText h2{
+        font-size: 1.5rem;
+    }
+    .about .aboutText p{
+        font-size: 1rem;
+        width: 100%;
+        padding: 0;
+    }
+    .about .aboutText .cards{
+        display: block;
+        padding: 1rem;
+    }
+    .portfolio .portfolioCards{
+        padding: .5rem;
+    }
+    .portfolio .portfolioCards .portcard{
+        padding: 0 3rem;
+    }
+    .accordionContainer{
+        padding-left: 4.5rem;
+    }
+    .team .teamCard{
+        padding: 3rem 3.5rem 2rem 3.5rem;
+    }
+    .clients .container{
+        padding: 4rem 1rem;
+    }
+    .contact .container{
+        padding: 5rem 2rem 3rem 2rem;
+    }
+    .contact .container .address{
+        padding: 0;
+    }
+    .contact .container .address .addressContent h3{
+        font-size: 1.1rem;
+    }
+    .contact .container .address .addressContent p{
+        font-size: .7rem;
+        width: 100%;
+        padding-left: 6;
+        padding-right: 0;
+    }
+    .join p:nth-child(2){
+        text-align: center;
+        font-size: .9rem;
+    }
+    .contents{
+        padding: 0;
+    }
+    .contents .content .social a i{
+        font-size: .9rem;
+        width: 30px;
+        height: 30px;
+        
+    }
+    .footer{
+        display: block;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .footer p{
+        font-size: .8rem;
+    }
+
+  
+    .scrollToTop-btn.active {
+        right: 2.5rem;
     }
 }

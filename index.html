@@ -11,6 +11,7 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
@@ -18,25 +19,26 @@
       <i class="fas fa-angle-up"></i>
     </div>
     <!-- header section start -->
-    <section class="header">
+    <header class="header">
       <a href="#" class="logo">ninestars</a>
       <nav class="navbar">
-        <a href="#" class="active" id="home">home</a>
-        <a href="#" id="about us">about us</a>
-        <a href="#" id="services">services</a>
-        <a href="#" id="portfolio">portfolio</a>
-        <a href="#" id="team">team</a>
-        <a href="#" id="contact">contact us</a>
+        <a href="#home" class="active">home</a>
+        <a href="#about">about us</a>
+        <a href="#services">services</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#team">team</a>
+        <a href="#contact">contact us</a>
         <a href="#" class="btn">get started</a>
       </nav>
       <i class="fas fa-bars menu_bar"></i>
-    </section>
+    </header>
     <!-- header section end -->
 
     <!-- home section start -->
 
     <section class="home" id="home">
-      <div class="home_container">
+      <div class="home_container" data-aos="fade-up"
+      data-aos-duration="3000">
         <div class="homeText" id="homeText">
           <h1 class="home_title">Bettter digital experience with Ninestars</h1>
           <h2 class="home_info">
@@ -53,19 +55,21 @@
     <!-- home section end -->
 
     <!-- about section start -->
-    <section class="about" id="about">
+    <section class="about" id="about" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
       <div class="aboutImg">
         <img src="img/about-img.svg" alt="" />
       </div>
       <div class="aboutText">
         <div class="aboutTitle">
           <h2>Voluptatem dignissimos provident quasi</h2>
+          <p class="aboutInfo">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute
+            irure dolor in reprehenderit
+          </p>
         </div>
-        <p class="aboutInfo">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute
-          irure dolor in reprehenderit
-        </p>
         <div class="cards">
             <div class="aboutCard">
                 <i class="fas fa-file-invoice"></i>
@@ -92,30 +96,12 @@
 
     <!-- services section start  -->
 
-    <section class="services" id="services">
+    <section class="services" id="services" data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom">
       <p class="sectionName">services</p>
       <p class="sectionTitle">Check out the great services we offer</p>
       <div class="servicesCards">
-        <div class="card">
-          <i class="fab fa-dribbble"></i>
-          <a href="#">lorem ipsum</a>
-          <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-file-alt"></i>
-          <a href="#">Sed ut perspiciatis</a>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-tachometer-alt"></i>
-          <a href="#">Magni Dolores</a>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-globe-americas"></i>
-          <a href="#">Nemo Enim</a>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
-        </div>
+      
       </div>
     </section>
 
@@ -123,43 +109,44 @@
 
     <!-- portfolio section start  -->
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="portfolio" data-aos="fade-up"
+    data-aos-duration="3000">
       <p class="sectionName">portfolio</p>
       <p class="sectionTitle">Check out our beautifull portfolio</p>
       <div class="portfolioFilter">
         <ul class="filter">
-          <li class="filterItem active">all</li>
-          <li class="filterItem">app</li>
-          <li class="filterItem">card</li>
-          <li class="filterItem">web</li>
+          <li class="filterItem  active" data-filter="all">all</li>
+          <li class="filterItem" data-filter="app">app</li>
+          <li class="filterItem" data-filter="cards">card</li>
+          <li class="filterItem" data-filter="web">web</li>
         </ul>
       </div>
       <div class="portfolioCards">
-        <div class="card">
+        <div class="portcard app">
           <img src="img/portfolio/portfolio-1.jpg" alt="">
         </div>
-        <div class="card">
+        <div class="portcard app">
           <img src="img/portfolio/portfolio-2.jpg" alt="">
         </div>
-        <div class="card">
+        <div class="portcard app">
           <img src="img/portfolio/portfolio-3.jpg" alt="">
         </div>
-        <div class="card">
+        <div class="portcard cards">
           <img src="img/portfolio/portfolio-4.jpg" alt="">
         </div>
-        <div class="card">
+        <div class="portcard cards">
           <img src="img/portfolio/portfolio-5.jpg" alt="">
         </div>
-        <div class="card">
+        <div class="portcard cards">
           <img src="img/portfolio/portfolio-6.jpg" alt="">
         </div>
-        <div class="card">
+        <div class="portcard web">
           <img src="img/portfolio/portfolio-7.jpg" alt="">
         </div>
-        <div class="card">
+        <div class="portcard web">
           <img src="img/portfolio/portfolio-8.jpg" alt="">
         </div>
-        <div class="card">
+        <div class="portcard web">
           <img src="img/portfolio/portfolio-9.jpg" alt="">
         </div>
       </div>
@@ -171,8 +158,281 @@
     <section class="faq" id="faq">
       <p class="sectionName">F.A.Q</p>
       <p class="sectionTitle">Frequently Asked Questions</p>
+
+      <div class="accordionContainer">
+        <div class="accordion">
+          <button><i class="fas fa-chevron-down"></i>Non consectetur a erat nam at lectus urna duis?</button>
+        </div>
+        <div class="accordionText">
+          <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+        </div>
+        <div class="accordion">
+          <button><i class="fas fa-chevron-down"></i>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</button>
+        </div>
+        <div class="accordionText">
+          <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+        </div>
+        <div class="accordion">
+          <button><i class="fas fa-chevron-down"></i>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</button>
+        </div>
+        <div class="accordionText">
+          <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+        </div>
+        <div class="accordion">
+          <button><i class="fas fa-chevron-down"></i>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</button>
+        </div>
+        <div class="accordionText">
+          <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+        </div>
+        <div  class="accordion">
+          <button><i class="fas fa-chevron-down"></i>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</button>
+        </div>
+        <div class="accordionText">
+          <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+        </div>
+        <div  class="accordion">
+          <button><i class="fas fa-chevron-down"></i>Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor?</button>
+        </div>
+        <div class="accordionText">
+          <p>Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.</p>
+        </div>
+      </div>
     </section>
     <!-- faq section end  -->
+
+    <!-- team section start  -->
+
+    <section class="team" id="team" data-aos="fade-up"
+    data-aos-duration="3000">
+      <p class="sectionName">Team</p>
+      <p class="sectionTitle">Our team is always here to help</p>
+
+      <div class="teamCard">
+        <div class="card">
+          <img src="img/team/team-1.jpg" alt="">
+          <div class="teamInfo">
+            <div class="teamName">
+              <h3>Walter White</h3>
+              <p>Chief Executive Officer</p>
+            </div>
+            <div class="teamSocial">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/team/team-2.jpg" alt="">
+          <div class="teamInfo">
+            <div class="teamName">
+              <h3>Sarah Jhonson</h3>
+              <p>Sarah Jhonson</p>
+            </div>
+            <div class="teamSocial">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/team/team-3.jpg" alt="">
+          <div class="teamInfo">
+            <div class="teamName">
+              <h3>William Anderson</h3>
+              <p>CTO</p>
+            </div>
+            <div class="teamSocial">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/team/team-4.jpg" alt="">
+          <div class="teamInfo">
+            <div class="teamName">
+              <h3>Amanda Jepson</h3>
+              <p>Accountant</p>
+            </div>
+            <div class="teamSocial">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- team section end  -->
+    
+    <!-- clients section start  -->
+    <section class="clients" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
+      <p class="sectionName">Clients</p>
+      <p class="sectionTitle">They trusted us</p>
+      <div class="container">
+        <div class="wrapper">
+          <div class="slide">
+            <img src="img/clients/client-1.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="img/clients/client-2.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="img/clients/client-3.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="img/clients/client-4.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="img/clients/client-5.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="img/clients/client-6.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="img/clients/client-7.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="img/clients/client-8.png" alt="">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- clients section end  -->
+
+    <!-- contact section start  -->
+
+    <section class="contact" id="contact" data-aos="fade-up"
+    data-aos-duration="3000">
+      <p class="sectionName">Contact Us</p>
+      <p class="sectionTitle">Contact us the get started</p>
+      <div class="container">
+        <div class="address">
+          <div class="addressContent">
+            <div class="location">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Location:</h3>
+            </div>
+            <p>A108 Adam Street, New York, NY 535022</p>
+            <div class="email">
+              <i class="fas fa-envelope-square"></i>
+              <h3>Email</h3>
+            </div>
+            <p>info@example.com</p>
+            <div class="phone">
+              <i class="fas fa-phone-alt"></i>
+              <h3>Phone</h3>
+            </div>
+            <p>+998999999999</p>
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194198.98400159547!2d71.06908667848!3d40.48944105839143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb028e966a39b1%3A0x9983221e39dd013!2sBag&#39;dod%20tumani%2C%20O%60zbekiston!5e0!3m2!1suz!2s!4v1643727968633!5m2!1suz!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="message">
+          <form action="forma">
+            <label for="your name">your name</label>
+            <input type="text">
+            <label for="your email">your email</label>
+            <input type="email">
+            <label for="sybject">subject</label>
+            <input type="text">
+            <label for="message">message</label>
+            <textarea name="message" id="" cols="30" rows="5"></textarea>
+            <a href="#" class="btn">send message</a>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section end  -->
+
+
+    <!-- join section start  -->
+    
+    <section class="join">
+      <p class="sectionName">Join Our Newsletter</p>
+      <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+      <div id="joinSend">
+        <input type="email">
+        <button type="submit" class="btn">Subscribe</button>
+      </div>
+    </section>
+
+    <!-- join section end  -->
+
+    <!-- footer section start  -->
+
+    <section data-aos="fade-up"
+    data-aos-duration="3000">
+      <div class="contents">
+        <div class="content">
+          <h2>Ninestars</h2>
+          <p>A108 Adam Street
+            New York, NY 535022
+            United States</p>
+            <a href="#"><span>Phone:</span>+998999999999</a>
+            <a href="#"><span>Email:</span>info@example.com</a>
+        </div>
+        <div class="content">
+          <h4>Useful Links</h4>
+          <a href="#"><i class="fas fa-chevron-right"></i>Home</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>About us</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>services</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>Team</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>Privacy policy</a>
+        </div>
+        <div class="content">
+          <h4>Useful Links</h4>
+          <a href="#"><i class="fas fa-chevron-right"></i>
+            Web Design</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>
+            Web Development</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>
+            Product Management</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>
+            Marketing</a>
+          <a href="#"><i class="fas fa-chevron-right"></i>
+            Graphic Design</a>
+        </div>
+        <div class="content">
+          <h4>Our Social Networks</h4>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-skype"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p>© Copyright <span>Ninestars.</span> All Rights Reserved</p>
+      <p>Designed by <a href="#">Css and Js</a></p>
+    </section>
+
+    <!-- footer section end  -->
+
+
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
