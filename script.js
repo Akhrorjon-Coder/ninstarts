@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',()=>{
+window.addEventListener('DOMContentLoaded',()=>{
     const menuBar = document.querySelector('.menu_bar');
     const navbar = document.querySelector('.navbar');
 
